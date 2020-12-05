@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import banner from '@/components/banner/banner'
 import classManage from '@/components/banner/classManage'
@@ -14,35 +15,51 @@ export default new Router({
     {
       path: '/',
       name: 'HelloWorld',
-      component: HelloWorld
+      component: HelloWorld,
     },
     {
       path:'/banner',
       name:'banner',
       component:banner,
-      meta:{
-      	requireAuth:true,
-      }
     },
     {
       path:'/banner',
       name:'classManage',
-      component:classManage
+      component:classManage,
     },
     {
       path:'/banner',
       name:'gradeManage',
-      component:gradeManage
+      component:gradeManage,
     },
     {
       path:'/banner',
       name:'paperManage',
-      component:paperManage
+      component:paperManage,
     },
     {
       path:'/banner',
       name:'information',
-      component:information
+      component:information,
     }
-  ]
+  ],
 })
+
+
+// router.beforeEach((to, from, next) => {
+//  if (username != '' && password != '') {
+//   // 在已登陆的情况下访问登陆页会重定向到首页
+//   if (to.path === '/HelloWorld') {
+//    next({path: '/'})
+//   } else {
+//    next({path: to.path || '/'})
+//   }
+//  } else {
+//   // 没有登陆则访问任何页面都重定向到登陆页
+//   if (to.path === '/HelloWorld') {
+//    next()
+//   } else {
+//    next(`/HelloWorld?redirect=${to.path}`)
+//   }
+//  }
+// })

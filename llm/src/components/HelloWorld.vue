@@ -18,13 +18,14 @@
 
 <script>
 import $ from 'jquery'
+import Router from 'vue-router'
 export default {
   name: 'HelloWorld',
   data () {
     return {
       msg: '欢迎来到卓音考试系统'
           }
-  }
+  },
 }  
 </script>
 
