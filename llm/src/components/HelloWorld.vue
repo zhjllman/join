@@ -26,32 +26,6 @@ export default {
           }
   }
 }  
-// onSubmit(function(){
-//   var obj = this.userInfo;
-//   obj.url = this.domainName;
-//   LoginApi.login(this.url + this.curVersion, obj)
-//     .then(res =>{
-//       console.log(res.data);
-//       if(res.data.status === "SUCCESS") {
-//         this.$message({
-//           message:"登录成功",
-//           type:"sucess"
-//         });
-//         localStorage.setItem("loginName",this.userInfo.loginName);
-//         this.$router.push("/index");
-//       }else{
-//         this.user.info = {
-//           loginName:"",
-//           password:""
-//         };
-//         this.$message.error("账号或密码有误");
-//       }
-//     })
-//     .catch(err =>{
-//       this.$message.error("登录失败");
-//       console.log(err);
-//     });
-// })
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
